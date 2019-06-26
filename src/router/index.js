@@ -34,6 +34,7 @@ export const constantRouterMap = [
     // hidden: true,
     children: [{
       path: 'dashboard',
+      name: '首页',
       meta: { title: '首页', icon: 'dashboard' },
       component: () => import('@/views/dashboard/index')
     }]
@@ -155,6 +156,7 @@ export const constantRouterMap = [
       {
         path: 'menu2',
         component: () => import('@/views/nested/menu2/index'),
+        name: 'Menu2',
         meta: { title: 'menu2' }
       }
     ]
@@ -179,3 +181,7 @@ export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
+
+export const asyncRouterMap = [
+  { path: '*', redirect: '/404', hidden: true }
+]

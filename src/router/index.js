@@ -30,11 +30,10 @@ export const constantRouterMap = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
-    name: 'Dashboard',
     // hidden: true,
     children: [{
       path: 'dashboard',
-      name: '首页',
+      name: 'Dashboard',
       meta: { title: '首页', icon: 'dashboard' },
       component: () => import('@/views/dashboard/index')
     }]
@@ -45,19 +44,19 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/test/one',
     name: 'Test',
-    meta: { title: 'Test', icon: 'example' },
+    meta: { title: '菜单', icon: 'example' },
     children: [
       {
         path: 'one',
         component: () => import('@/views/test/one'),
         name: 'One',
-        meta: { title: 'One', icon: 'tree' }
+        meta: { title: '子菜单1', icon: 'tree' }
       },
       {
         path: 'two',
         component: () => import('@/views/test/two'),
         name: 'Two',
-        meta: { title: 'Two', icon: 'tree' }
+        meta: { title: '子菜单2', icon: 'tree' }
       }
     ]
   },
@@ -67,25 +66,25 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    meta: { title: '示例', icon: 'example' },
     children: [
       {
         path: 'table',
         name: 'Table',
         component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        meta: { title: '表格', icon: 'table' }
       },
       {
         path: 'form',
         name: 'Form',
         component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        meta: { title: '表单', icon: 'form' }
       },
       {
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        meta: { title: '分类树', icon: 'tree' }
       }
     ]
   },
@@ -95,40 +94,37 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/nested/menu1',
     name: 'Nested',
-    meta: {
-      title: 'Nested',
-      icon: 'nested'
-    },
+    meta: { title: '多级菜单', icon: 'nested' },
     children: [
       {
         path: 'menu1',
         component: () => import('@/views/nested/menu1/index'), // Parent router-view
         name: 'Menu1',
-        meta: { title: 'Menu1' },
+        meta: { title: '菜单1' },
         children: [
           {
             path: 'menu1-1',
             component: () => import('@/views/nested/menu1/menu1-1'),
             name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
+            meta: { title: '菜单1-1' }
           },
           {
             path: 'menu1-2',
             component: () => import('@/views/nested/menu1/menu1-2'),
             name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
+            meta: { title: '菜单1-2' },
             children: [
               {
                 path: 'menu1-2-1',
                 component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
                 name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' }
+                meta: { title: '菜单1-2-1' }
               },
               {
                 path: 'menu1-2-2',
                 component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
                 name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' }
+                meta: { title: '菜单1-2-2' }
               }
             ]
           },
@@ -136,7 +132,7 @@ export const constantRouterMap = [
             path: 'menu1-3',
             component: () => import('@/views/nested/menu1/menu1-3'),
             name: 'Menu1-3',
-            meta: { title: 'Menu1-3' }
+            meta: { title: '菜单1-3' }
           }
         ]
       },
@@ -144,7 +140,7 @@ export const constantRouterMap = [
         path: 'menu2',
         component: () => import('@/views/nested/menu2/index'),
         name: 'Menu2',
-        meta: { title: 'menu2' }
+        meta: { title: '菜单2' }
       }
     ]
   },
@@ -157,7 +153,7 @@ export const constantRouterMap = [
         path: 'index',
         name: 'Other',
         component: () => import('@/views/other/index'),
-        meta: { title: 'Other', icon: 'form' }
+        meta: { title: '其它', icon: 'form' }
       }
     ]
   },
@@ -168,7 +164,7 @@ export const constantRouterMap = [
     children: [
       {
         path: 'https://panjiachen.gitee.io/vue-element-admin-site/zh/',
-        meta: { title: 'Document', icon: 'link' }
+        meta: { title: '文档', icon: 'link' }
       }
     ]
   },

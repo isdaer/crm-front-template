@@ -4,13 +4,12 @@
   </div>
 </template>
 <script>
-
 export default {
   name: 'Two',
   components: { },
   data() {
     return {
-      msg: ''
+
     }
   },
   mounted: function() {

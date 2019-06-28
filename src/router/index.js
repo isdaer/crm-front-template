@@ -58,12 +58,6 @@ export const constantRouterMap = [
         component: () => import('@/views/test/two'),
         name: 'Two',
         meta: { title: 'Two', icon: 'tree' }
-      },
-      {
-        path: 'three',
-        name: 'Three',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Three', icon: 'table' }
       }
     ]
   },
@@ -82,23 +76,16 @@ export const constantRouterMap = [
         meta: { title: 'Table', icon: 'table' }
       },
       {
+        path: 'form',
+        name: 'Form',
+        component: () => import('@/views/form/index'),
+        meta: { title: 'Form', icon: 'form' }
+      },
+      {
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
       }
     ]
   },
@@ -158,6 +145,19 @@ export const constantRouterMap = [
         component: () => import('@/views/nested/menu2/index'),
         name: 'Menu2',
         meta: { title: 'menu2' }
+      }
+    ]
+  },
+
+  {
+    path: '/other',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Other',
+        component: () => import('@/views/other/index'),
+        meta: { title: 'Other', icon: 'form' }
       }
     ]
   },

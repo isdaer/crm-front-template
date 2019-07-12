@@ -19,6 +19,8 @@
       </el-table-column>
       <el-table-column label="Author" width="110" align="center">
         <template slot-scope="scope">
+          <i :class=" [scope.row.author == '启用' ? 'el-icon-dot-able' : 'el-icon-dot-unable', 'el-icon-dot'] " />
+          <!-- <i :class="scope.row.author | authorFilter" /> -->
           <span>{{ scope.row.author }}</span>
         </template>
       </el-table-column>
@@ -54,6 +56,13 @@ export default {
         deleted: 'danger'
       }
       return statusMap[status]
+    },
+    authorFilter(author) {
+      const authorMap = {
+        启用: 'el-icon-dot el-icon-dot-able',
+        禁用: 'el-icon-dot el-icon-dot-unable'
+      }
+      return authorMap[author]
     }
   },
   data() {
@@ -76,3 +85,19 @@ export default {
   }
 }
 </script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+  .el-icon-dot {
+  	display: inline-block;
+  	width: 10px;
+  	height: 10px;
+  	border-radius: 50%;  	
+  }
+  .el-icon-dot-able {
+  	background: #409eff;
+  }
+  .el-icon-dot-unable {
+  	background: #f56c6c;
+  }
+</style>
+

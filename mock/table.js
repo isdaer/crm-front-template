@@ -7,7 +7,7 @@ export default {
         id: '@id',
         title: '@sentence(10, 20)',
         'status|1': ['published', 'draft', 'deleted'],
-        author: 'name',
+        'author|1': ['启用', '禁用'],
         display_time: '@datetime',
         pageviews: '@integer(300, 5000)'
       }]

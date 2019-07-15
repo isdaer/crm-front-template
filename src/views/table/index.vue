@@ -88,16 +88,16 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
   .el-icon-dot {
-  	display: inline-block;
-  	width: 10px;
-  	height: 10px;
-  	border-radius: 50%;  	
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
   }
   .el-icon-dot-able {
-  	background: #409eff;
+    background: #409eff;
   }
   .el-icon-dot-unable {
-  	background: #f56c6c;
+    background: #f56c6c;
   }
 </style>
 
